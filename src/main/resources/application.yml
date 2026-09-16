@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-pedidos
+  datasource:
+    url: jdbc:mysql://database-1.crbvjlzem1qe.us-east-1.rds.amazonaws.com:3306/pedidos360?createDatabaseIfNotExist=true
+    username: Pedidos360
+    password: Pedidos123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # OJO: Este TU-TENANT-ID lo cambias cuando configures Azure AD
+          issuer-uri: https://login.microsoftonline.com/TU-TENANT-ID/v2.0://login.microsoftonline.com/TU-TENANT-ID/v2.0
