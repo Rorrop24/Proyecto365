@@ -1,0 +1,17 @@
+<main style="text-align: center; margin-top: 100px; font-family: sans-serif;">
+  <h1>Bienvenido a {{ title }}</h1>
+
+  <section *ngIf="!isLoggedIn()">
+    <p>Por favor, inicia sesión con tu cuenta del tenant para acceder al sistema.</p>
+    <button (click)="login()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+      Iniciar Sesión
+    </button>
+  </section>
+
+  <section *ngIf="isLoggedIn()">
+    <p style="color: green;">¡Sesión iniciada exitosamente! Ya tienes tu JWT.</p>
+    <button (click)="logout()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+      Cerrar Sesión
+    </button>
+  </section>
+</main>
