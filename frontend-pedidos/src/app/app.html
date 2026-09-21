@@ -1,17 +1,16 @@
-<main style="text-align: center; margin-top: 100px; font-family: sans-serif;">
-  <h1>Bienvenido a {{ title }}</h1>
+<app-navbar></app-navbar>
 
-  <section *ngIf="!isLoggedIn()">
-    <p>Por favor, inicia sesión con tu cuenta del tenant para acceder al sistema.</p>
-    <button (click)="login()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
-      Iniciar Sesión
-    </button>
-  </section>
 
-  <section *ngIf="isLoggedIn()">
-    <p style="color: green;">¡Sesión iniciada exitosamente! Ya tienes tu JWT.</p>
-    <button (click)="logout()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
-      Cerrar Sesión
-    </button>
-  </section>
-</main>
+<div class="container mt-4">
+
+
+  <div class="text-center mb-5">
+    <h2>Bienvenido a Pedidos360</h2>
+    <p class="text-success">¡Sesión iniciada exitosamente! Ya tienes tu JWT.</p>
+    <button class="btn btn-outline-secondary">Cerrar Sesión</button>
+  </div>
+
+
+  <router-outlet></router-outlet>
+
+</div>

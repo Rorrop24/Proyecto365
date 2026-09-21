@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MsalService } from '@azure/msal-angular';
 import { HttpClient } from '@angular/common/http'; // <-- Importamos HttpClient
+import { Navbar } from './components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet,Navbar],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
